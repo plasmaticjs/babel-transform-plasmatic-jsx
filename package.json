@@ -1,0 +1,39 @@
+{
+  "name": "babel-plugin-transform-plasmatic-jsx",
+  "version": "0.0.4",
+  "description": "Turn JSX syntax into Plasmatic components",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/plasmaticjs/babel-transform-plasmatic-jsx.git"
+  },
+  "scripts": {
+    "build": "babel lib --presets es2015 -d dist",
+    "build:test": "babel test/index.js --presets es2015  --plugins ../dist/index.js --out-file test/index.out.js",
+    "prepublish": "gulp eslint && gulp build",
+    "watch": "npm-watch"
+  },
+  "keywords": [
+    "babel-plugin",
+    "plasmatic"
+  ],
+  "author": "Milos Mosovsky <milos.mosovsky@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plasmaticjs/babel-transform-plasmatic-jsx/issues"
+  },
+  "homepage": "https://github.com/plasmaticjs/babel-transform-plasmatic-jsx#readme",
+  "dependencies": {
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-runtime": "^6.18.0",
+    "babel-types": "^6.18.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "gulp": "https://github.com/gulpjs/gulp#4.0",
+    "gulp-eslint": "^3.0.1"
+  }
+}

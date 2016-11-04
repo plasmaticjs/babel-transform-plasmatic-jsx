@@ -1,0 +1,11 @@
+# IDEA
+.idea
+*.iml
+
+# Node Module
+node_modules
+
+npm-debug.log
+test
+backup
+dist
