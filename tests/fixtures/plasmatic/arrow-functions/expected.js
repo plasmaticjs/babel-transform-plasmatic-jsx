@@ -10,6 +10,6 @@ var bar = function () {
   var _this2 = this;
 
   return function () {
-    return Plasmatic.createElement(_this2.foo, null);
+    return Plasmatic.createElement(_this2.foo3, null);
   };
 };
