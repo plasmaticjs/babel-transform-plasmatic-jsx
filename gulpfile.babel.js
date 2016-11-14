@@ -17,7 +17,7 @@ gulp.task('build', (done) => {
 });
 
 gulp.task('default', gulp.series('build', () => (
-  gulp.watch(['./lib/*.js', './test/*'], gulp.series('build', (done) => {
+  gulp.watch(['./lib/*.js', './test/index.jsx'], gulp.series('build', (done) => {
     exec('npm run build:test', (error, stdout, stderr) => {
       execResult(stderr, stdout);
       done();

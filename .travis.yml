@@ -1,0 +1,12 @@
+language: node_js
+before_install:
+- node --version
+- npm --version
+- npm install -g yarn
+node_js:
+- '6'
+install:
+- yarn install
+script:
+- "npm run ci:link"
+- "npm run ci:test"
