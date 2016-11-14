@@ -9,3 +9,4 @@ npm-debug.log
 test
 backup
 dist
+tests/run.js
