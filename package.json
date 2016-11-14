@@ -10,8 +10,9 @@
   "scripts": {
     "build": "babel lib --presets es2015 -d dist",
     "build:test": "babel test/index.jsx --presets es2015  --plugins ../dist/index.js --out-file test/index.out.js",
-    "test": "npm link && npm link babel-plugin-transform-plasmatic-jsx && babel tests/index.js --presets es2015 --out-file tests/run.js && mocha tests/run.js && rm tests/run.js",
-    "prepublish": "gulp eslint && gulp build",
+    "ci:link": "npm run build && npm link && npm link babel-plugin-transform-plasmatic-jsx",
+    "ci:test": "babel tests/index.js --presets es2015 --out-file tests/run.js && mocha tests/run.js && rm tests/run.js",
+    "test": "gulp eslint && gulp build",
     "watch": "npm-watch"
   },
   "keywords": [
@@ -32,9 +33,10 @@
     "esutils": "^2.0.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
-    "babel-plugin-external-helpers": "^6.18.0",
     "babel-helper-transform-fixture-test-runner": "^6.18.2",
+    "babel-plugin-external-helpers": "^6.18.0",
     "eslint-config-airbnb": "^13.0.0",
     "eslint-plugin-import": "^2.2.0",
     "gulp": "https://github.com/gulpjs/gulp#4.0",

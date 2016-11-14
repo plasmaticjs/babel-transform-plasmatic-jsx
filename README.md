@@ -3,6 +3,9 @@
 </p>
 
 <p align="center">
+    <a href="https://travis-ci.org/plasmaticjs/babel-transform-plasmatic-jsx/">
+        <img alt="Plasmatic" src="https://img.shields.io/travis/plasmaticjs/babel-transform-plasmatic-jsx.svg?style=flat-square">
+    </a>
     <a href="https://codeclimate.com/github/plasmaticjs/babel-transform-plasmatic-jsx">
         <img alt="Plasmatic" src="https://img.shields.io/codeclimate/github/plasmaticjs/babel-transform-plasmatic-jsx.svg?style=flat-square">
     </a>
